@@ -1,25 +1,132 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+const careers = [
+  "Mobile Developer",
+  "Data Scientist",
+  "Web Developer",
+  "UI/UX Designer",
+];
+
 function Intro() {
+  const [careerIndex, setCareerIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [darkenedCircles, setDarkenedCircles] = useState(
+    new Array(6).fill(false)
+  );
+
+  useEffect(() => {
+    let timeout;
+    const currentCareer = careers[careerIndex];
+
+    if (isDeleting) {
+      timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev.slice(0, -1));
+        if (displayedText === "") {
+          setIsDeleting(false);
+          setCareerIndex((prev) => (prev + 1) % careers.length);
+        }
+      }, 100);
+    } else {
+      timeout = setTimeout(() => {
+        setDisplayedText(currentCareer.slice(0, displayedText.length + 1));
+        if (displayedText === currentCareer) {
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
+      }, 150);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayedText, isDeleting, careerIndex]);
+
   return (
     <section
       id="intro"
-      className="min-h-screen flex items-center justify-center bg-black text-white relative px-6"
+      className="min-h-screen flex flex-col items-start justify-center relative px-10 overflow-hidden"
     >
+      {/* Intro Text */}
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        className="max-w-4xl"
+      >
+        <div className="ps-20">
+          <div className="flex items-center gap-[3px]">
+            <p className="w-8 md:w-10 h-[1px] bg-[#C8A26B] opacity-70"></p>
+            <p className="text-[#C8A26B] text-xl uppercase tracking-widest leading-none ps-2">
+              Hello World,
+            </p>
+            <p className="text-xl uppercase tracking-widest leading-none ps-2">
+              I am
+            </p>
+          </div>
+        </div>
+      </motion.div>
+      
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="max-w-4xl text-left"
+        transition={{ delay: 0.5, duration: 0.5 }}
+        className="max-w-4xl ps-20 mt-5"
       >
-        <p className="text-yellow-400 text-sm uppercase tracking-widest mb-4">
-          Hello World
-        </p>
-        <h1 className="text-5xl md:text-7xl font-serif font-bold leading-tight">
-          I am Luther, a digital designer & frontend developer based in
-          Somewhere.
+        <h1 className="text-5xl md:text-7xl font-serif leading-tight">
+          Lotanna Okeke.
+          <br />
+          <span className="text-5xl">
+            I’m a <span className="text-[#C8A26B]">{displayedText}</span>
+            <span className="blinking-cursor">|.</span>
+          </span>
         </h1>
+      </motion.div>
+
+      {/* Animated Semicircles */}
+      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 flex flex-col items-end">
+        {[100, 200, 300, 400, 500, 800].map((size, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 1 + index * 0.3, duration: 0.6 }}
+            onAnimationComplete={() => {
+              setTimeout(() => {
+                setDarkenedCircles((prev) => {
+                  const updatedCircles = [...prev];
+                  updatedCircles[index] = true;
+                  return updatedCircles;
+                });
+              }, 600);
+            }}
+            className="rounded-full" //Shape of the circles
+            style={{
+              width: `${size * 2}px`,
+              height: `${size * 2}px`,
+              borderBottom: "none",
+              position: "absolute",
+              right: "-10%",
+              top: `calc(50% - ${size}px)`,
+              border: `2px solid ${
+                darkenedCircles[index] ? "#2A2620" : "#C8A26B"
+              }`,
+              transition: "border-color 0.5s ease-in-out",
+            }}
+          ></motion.div>
+        ))}
+      </div>
+
+      {/* Social Media Links */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 3.5, duration: 0.8 }}
+        className="absolute right-10 top-1/2 transform -translate-y-1/2 flex mt-70 space-y-4 text-gray-500 text-xs tracking-widest rotate-90 origin-right uppercase"
+      >
+        {["BEHANCE", "TWITTER", "DRIBBBLE", "INSTAGRAM"].map((site, index) => (
+          <a key={index} href="#" className="ms-20 hover:text-white transition">
+            {site}
+          </a>
+        ))}
       </motion.div>
     </section>
   );

@@ -3,24 +3,32 @@ import { assests } from "../assets/assests";
 
 function About() {
   return (
-    <section id="about" className="min-h-screen py-20">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-8">About Me</h2>
-        <div className="flex flex-col md:flex-row items-center">
+    <section id="about" className="min-h-screen flex items-center relative px-10 bg-[#141516]">
+      <div className="max-w-7xl mx-auto flex items-center relative">
+        
+        {/* Image - Takes 50% of the Screen */}
+        <div className="w-1/2 h-full left-0">
           <img
             src={assests.dummyPic}
             alt="Luther"
-            className="w-full md:w-1/2 rounded-lg mb-4 md:mb-0"
+            className="w-dvw h-full object-cover rounded-lg"
           />
-          <div className="md:ml-8">
-            <p className="text-lg mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <button className="px-6 py-2 bg-yellow-400 text-gray-900 font-bold rounded-lg hover:bg-yellow-500 transition duration-300">
-              Download CV
-            </button>
-          </div>
+        </div>
+
+        {/* Text - Overlapping the Image Slightly */}
+        <div className="absolute left-[49%] w-1/2 text-white">
+          <h3 className="text-[#C8A26B] text-sm uppercase tracking-widest mb-2">
+            ─── About
+          </h3>
+          <p className="text-gray-300 text-lg leading-relaxed mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+            ex ea commodo consequat.
+          </p>
+          <button className="px-8 py-3 text-sm tracking-widest font-semibold text-[#C8A26B] border border-[#C8A26B] hover:bg-[#C8A26B] hover:text-black transition duration-300 uppercase">
+            Download CV
+          </button>
         </div>
       </div>
     </section>
