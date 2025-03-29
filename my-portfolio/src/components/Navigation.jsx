@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import { motion } from "framer-motion";
 
 function Navigation() {
   const navLinks = [
@@ -36,7 +37,18 @@ function Navigation() {
   }, []);
 
   return (
-    <div className="fixed top-0 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[80%] bg-[#141516] z-50 border border-gray-700 flex flex-col md:flex-row md:justify-center">
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+        duration: 1.3,
+        delay: 0.3,
+      }}
+      className="fixed top-0 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[80%] bg-[#141516] z-50 border border-gray-700 flex flex-col md:flex-row md:justify-center"
+    >
       {navLinks.map((link, index) => (
         <div
           key={index}
@@ -57,7 +69,7 @@ function Navigation() {
           }
         >
           {link.refresh ? (
-            <span className="pl-6">{link.name}</span> //Making each navigation stay towards the left
+            <span className="pl-6">{link.name}</span>
           ) : (
             <div
               onClick={() =>
@@ -72,7 +84,7 @@ function Navigation() {
           )}
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 }
 

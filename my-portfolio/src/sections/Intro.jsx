@@ -75,7 +75,7 @@ function Intro() {
           Lotanna Okeke.
           <br />
           <span className="text-5xl">
-            I’m a <span className="text-[#C8A26B]">{displayedText}</span>
+            A <span className="text-[#C8A26B]">{displayedText}</span>
             <span className="blinking-cursor">|.</span>
           </span>
         </h1>
@@ -88,7 +88,7 @@ function Intro() {
             key={index}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1 + index * 0.3, duration: 0.6 }}
+            transition={{ delay:index * 0.3, duration: 0.6 }}
             onAnimationComplete={() => {
               setTimeout(() => {
                 setDarkenedCircles((prev) => {
@@ -119,7 +119,7 @@ function Intro() {
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 3.5, duration: 0.8 }}
+        transition={{ delay: 2.5, duration: 0.5 }}
         className="absolute right-10 top-1/2 transform -translate-y-1/2 flex mt-70 space-y-4 text-gray-500 text-xs tracking-widest rotate-90 origin-right uppercase"
       >
         {["BEHANCE", "TWITTER", "DRIBBBLE", "INSTAGRAM"].map((site, index) => (

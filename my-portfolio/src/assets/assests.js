@@ -1,8 +1,9 @@
 import dummyPic from './contact_img.png'
-// import 
+import profile from './profile.jpeg'
 
 export const assests = {
     dummyPic,
+    profile
 }
 
 export const colors = {
