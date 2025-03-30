@@ -1,5 +1,4 @@
 import React from "react";
-import { assests } from "../assets/assests";
 import { motion } from "framer-motion";
 import Experience from "./Experience";
 
