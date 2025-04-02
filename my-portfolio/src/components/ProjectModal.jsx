@@ -14,12 +14,12 @@ function ProjectModal({ project, onClose }) {
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.9, opacity: 0 }}
-        className="bg-[#1b1b1d] text-white p-8 rounded-2xl max-w-lg w-full shadow-xl relative transition-all"
+        className="bg-[#2c2c2d] text-white p-8 rounded-2xl max-w-lg w-full shadow-xl relative transition-all"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
-          className="absolute top-4 right-2 text-gray-400 hover:text-white text-2xl transition-all hover:scale-110"
+          className="absolute top-1 right-2 text-gray-400 hover:text-white text-2xl transition-all hover:scale-110"
           onClick={onClose}
         >
           ✕
@@ -34,7 +34,7 @@ function ProjectModal({ project, onClose }) {
 
         {/* Project Details */}
         <div className="mt-6 text-center">
-          <h3 className="text-3xl font-bold text-yellow-400">
+          <h3 className="text-3xl font-bold text-[#C8A26B]">
             {project.projectName}
           </h3>
           <p className="text-gray-400 text-sm mt-1">
@@ -42,10 +42,10 @@ function ProjectModal({ project, onClose }) {
           </p>
 
           {/* Animated Divider */}
-          <div className="w-16 h-[3px] bg-yellow-500 mx-auto my-4 animate-pulse"></div>
+          <div className="w-16 h-[3px] bg-[#C8A26B] mx-auto my-4 animate-pulse"></div>
 
           {/* Project Description */}
-          <p className="text-gray-300 text-md leading-relaxed px-2">
+          <p className="text-white text-md leading-relaxed px-2">
             {project.projectDescription}
           </p>
 
@@ -54,7 +54,7 @@ function ProjectModal({ project, onClose }) {
             {project.skillsUsed.map((skill, index) => (
               <span
                 key={index}
-                className="bg-gray-800 text-gray-300 px-3 py-1 text-xs rounded-full transition hover:bg-yellow-500 hover:text-black"
+                className=" text-[#C8A26B] px-3 py-1 text-sm rounded-full cursor-default transition hover:bg-[#C8A26B] hover:text-black"
               >
                 {skill}
               </span>
@@ -64,7 +64,7 @@ function ProjectModal({ project, onClose }) {
           {/* Project Link Button */}
           <a
             href={project.projectLink}
-            className="inline-block bg-yellow-500 text-black font-semibold py-3 px-6 rounded-lg mt-6 transition-all duration-300 hover:bg-yellow-600 hover:scale-105"
+            className="inline-block bg-white text-black font-semibold py-3 px-6 rounded-lg mt-6 transition-all duration-300 hover:bg-[#C8A26B] hover:scale-105"
             target="_blank"
             rel="noopener noreferrer"
           >

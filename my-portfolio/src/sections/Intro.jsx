@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { socials } from "../assets/assests";
 
 const careers = [
   "Mobile Developer",
@@ -122,9 +123,9 @@ function Intro() {
         transition={{ delay: 2.5, duration: 0.5 }}
         className="absolute right-10 top-1/2 transform -translate-y-1/2 flex mt-70 space-y-4 text-gray-500 text-xs tracking-widest rotate-90 origin-right uppercase"
       >
-        {["BEHANCE", "TWITTER", "DRIBBBLE", "INSTAGRAM"].map((site, index) => (
-          <a key={index} href="#" className="ms-20 hover:text-white transition">
-            {site}
+        {socials.map((site, index) => (
+          <a key={index} href={site[1]} className="ms-20 uppercase hover:text-[#C8A26B] transition">
+            {site[0]}
           </a>
         ))}
       </motion.div>

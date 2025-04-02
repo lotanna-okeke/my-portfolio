@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link as ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
 
 function Navigation() {
@@ -16,19 +15,16 @@ function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
-      let foundActive = false;
+      let newActiveSection = activeSection;
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        if (
-          rect.top >= 0 &&
-          rect.top <= window.innerHeight * 0.4 &&
-          !foundActive
-        ) {
-          setActiveSection(section.id);
-          foundActive = true;
+        if (rect.top <= window.innerHeight * 0.4 && rect.bottom >= 100) {
+          newActiveSection = section.id;
         }
       });
+
+      setActiveSection(newActiveSection);
     };
 
     window.addEventListener("scroll", handleScroll);

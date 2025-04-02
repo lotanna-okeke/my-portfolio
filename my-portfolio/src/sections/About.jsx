@@ -5,9 +5,10 @@ import Expertise from "../components/Expertise";
 
 function About() {
   return (
-    <section id="about" className="min-h-screen flex flex-col items-center relative px-0 bg-[#141516]">
+    <section id="about" className="min-h-screen flex flex-col items-center relative pe-20 bg-[#141516]">
       {/* About Section */}
-      <div className="max-w-7xl mx-auto flex items-center relative w-full">
+      {/* <div className="max-w-7xl flex items-center relative w-full"> */}
+      <div className="max-w-[85%] flex items-center relative w-full">
         {/* Image - Takes 50% of the Screen */}
         <motion.div
           initial={{ opacity: 0, y: 100 }}
@@ -24,7 +25,7 @@ function About() {
           </div>
         </motion.div>
 
-        {/* Text + Button */}
+        {/* Text */}
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}

@@ -22,7 +22,7 @@ function Expertise() {
         </div>
 
         {/* Expertise Content */}
-        <h2 className="text-white text-4xl md:text-5xl font-semibold leading-relaxed mb-10">
+        <h2 className="text-white text-4xl md:text-5xl font-semibold leading-relaxed mb-15">
           Visual Design, Branding Identity, UI Design, Product Design,
           Prototyping, Illustration
         </h2>
@@ -30,7 +30,7 @@ function Expertise() {
         {/* Experience & Education Timeline */}
         <div className="flex flex-col md:flex-row justify-between gap-20">
           <div className="w-full md:w-1/2">
-            <h3 className="text-white text-xl mb-10 ms-6 uppercase tracking-widest">
+            <h3 className="text-white text-xl mb-5 ms-6 uppercase tracking-widest">
               Experience
             </h3>
 
@@ -63,7 +63,7 @@ function Expertise() {
           </div>
 
           <div className="w-full md:w-1/2">
-            <h3 className="text-white text-xl mb-10 ms-6 uppercase tracking-widest">
+            <h3 className="text-white text-xl mb-5 ms-6 uppercase tracking-widest">
               Education
             </h3>
 
