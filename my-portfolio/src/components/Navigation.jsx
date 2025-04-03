@@ -51,7 +51,7 @@ function Navigation() {
           className={`flex-1 py-4 text-gray-400 text-xs md:text-sm uppercase tracking-wider cursor-pointer transition-all duration-300 border-b md:border-b-0 md:border-r border-gray-700 
             ${
               activeSection === link.to && !link.refresh
-                ? "bg-[#2c2c2d] text-yellow-500 opacity-70"
+                ? "bg-[#2c2c2d] text-yellow-300 opacity-60"
                 : "hover:text-white"
             } 
             ${index === navLinks.length - 1 ? "md:border-r-0" : ""}`}

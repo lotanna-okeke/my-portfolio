@@ -1,78 +1,17 @@
 import React, { useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import ProjectModal from "../components/ProjectModal";
-import { assests } from "../assets/assests";
 import { motion } from "framer-motion";
+import { allProjects } from "../assets/assests";
 
 function Works() {
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const projects = [
-    {
-      id: 1,
-      picture: assests.dummyPic,
-      projectName: "Retro Camera",
-      projectTechnology: "Website",
-      projectDescription:
-        "A modern and minimalist website showcasing vintage camera collections.",
-      skillsUsed: ["Branding", "Product Design"],
-      projectLink: "#",
-    },
-    {
-      id: 2,
-      picture: assests.dummyPic,
-      projectName: "The White Lamp",
-      projectTechnology: "Product Design",
-      projectDescription:
-        "A sleek and stylish lamp design emphasizing simplicity and elegance.",
-      skillsUsed: ["Branding", "Minimalism"],
-      projectLink: "#",
-    },
-    {
-        id: 1,
-        picture: assests.dummyPic,
-        projectName: "Retro Camera",
-        projectTechnology: "Website",
-        projectDescription:
-          "A modern and minimalist website showcasing vintage camera collections.",
-        skillsUsed: ["Branding", "Product Design"],
-        projectLink: "#",
-      },
-      {
-        id: 2,
-        picture: assests.dummyPic,
-        projectName: "The White Lamp",
-        projectTechnology: "Product Design",
-        projectDescription:
-          "A sleek and stylish lamp design emphasizing simplicity and elegance.",
-        skillsUsed: ["Branding", "Minimalism"],
-        projectLink: "#",
-      },
-      {
-        id: 1,
-        picture: assests.dummyPic,
-        projectName: "Retro Camera",
-        projectTechnology: "Website",
-        projectDescription:
-          "A modern and minimalist website showcasing vintage camera collections.",
-        skillsUsed: ["Branding", "Product Design"],
-        projectLink: "#",
-      },
-      {
-        id: 2,
-        picture: assests.dummyPic,
-        projectName: "The White Lamp",
-        projectTechnology: "Product Design",
-        projectDescription:
-          "A sleek and stylish lamp design emphasizing simplicity and elegance.",
-        skillsUsed: ["Branding", "Minimalism"],
-        projectLink: "#",
-      },
-  ];
+  const projects = allProjects;
 
   // Framer Motion Variants for Staggered Animation
   const containerVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
