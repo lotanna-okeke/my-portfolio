@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { assests } from "../assets/assests";
 import { motion } from "framer-motion";
 import Expertise from "../components/Expertise";
+import DownloadCVModal from "../components/DownloadCVModal";
+
 
 function About() {
+  // State to control modal visibility
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+
   return (
     <section
       id="about"
@@ -20,19 +26,19 @@ function About() {
           className="w-full md:w-1/2"
         >
           <img
-            src={assests.profile}
+            src={assests.profile2}
             alt="Lotanna"
             className="w-full h-full object-cover rounded-lg"
           />
         </motion.div>
 
-        {/* Text */}
+        {/* Text and Button Container */}
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="w-full md:w-[52%] lg:w-[55%] md:ml-[-1%] lg:ml-[-4%] text-white"
+          className="w-full flex flex-col md:w-[52%] lg:w-[55%] md:ml-[-1%] lg:ml-[-4%] text-white md:justify-center"
         >
           <div className="mb-6">
             <div className="flex items-center gap-[3px]">
@@ -43,7 +49,7 @@ function About() {
             </div>
           </div>
 
-          <p className="text-gray-300 text-lg md:text-2xl leading-relaxed mb-10">
+          <p className="text-gray-300 text-lg md:text-2xl leading-relaxed mb-8 md:mb-16">
             I’m Lotanna Okeke — a creative Software Engineer and Data enthusiast
             with a strong foundation in Computer Science. I specialize in
             building user-focused web and mobile applications, blending solid
@@ -58,8 +64,12 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1, delay: 0.6 }}
+            className="md:mt-auto"
           >
-            <button className="w-full py-3 text-xs md:px-8 md:py-3 md:text-sm tracking-widest font-semibold bg-[#2c2c2d] text-[#C8A26B] hover:bg-[#C8A26B] hover:text-black transition duration-300 uppercase">
+            <button
+              className="w-full py-3 text-xs md:px-8 md:py-3 md:text-sm tracking-widest font-semibold bg-[#2c2c2d] text-[#C8A26B] hover:bg-[#C8A26B] hover:text-black transition duration-300 uppercase"
+              onClick={() => setIsModalOpen(true)}
+            >
               Download CV
             </button>
           </motion.div>
@@ -72,6 +82,7 @@ function About() {
       <Expertise />
       {/* Divider */}
       <div className="w-full h-[1px] bg-[#2c2c2d] my-10 md:my-16"></div>
+      {isModalOpen && <DownloadCVModal onClose={() => setIsModalOpen(false)} />}
     </section>
   );
 }

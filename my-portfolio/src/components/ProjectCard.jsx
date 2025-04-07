@@ -10,7 +10,7 @@ function ProjectCard({ project, onClick }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       whileHover={{ scale: 1.03 }}
-      className="flex flex-col sm:flex-row justify-between p-4 rounded-2xl cursor-pointer text-white transition-all duration-500 hover:text-[#C8A26B]"
+      className="flex flex-col sm:flex-row justify-between bg-[#2c2c2d] md:bg-[#2c2c2d00] p-4 rounded-2xl cursor-pointer text-white transition-all duration-500 hover:text-[#C8A26B]"
       onClick={onClick}
     >
       {/* Left Section (Image + Details) */}
@@ -18,7 +18,7 @@ function ProjectCard({ project, onClick }) {
         <img
           src={project.picture}
           alt={project.projectName}
-          className="w-full sm:w-1/3 h-auto object-cover rounded-lg shadow-md shadow-[#C8A26B] mb-4 sm:mb-0"
+          className="w-full md:w-32 sm:w-1/3 h-auto md:h-32 object-cover rounded-lg shadow-md shadow-[#5b4f3e] mb-4 sm:mb-0"
         />
 
         {/* Text + Arrow Group */}
@@ -37,7 +37,7 @@ function ProjectCard({ project, onClick }) {
           </p>
 
           <div className="flex items-center justify-between">
-            <h3 className="text-xl sm:text-3xl font-semibold">
+            <h3 className="text-xl sm:text-2xl font-semibold">
               {project.projectName}
             </h3>
 

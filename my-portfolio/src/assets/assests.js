@@ -1,11 +1,26 @@
-import dummyPic from './contact_img.png'
-import profile from './profile.jpeg'
-import profile2 from './profile2.jpeg'
+import dummyPic from './images/contact_img.png'
+import profile from './images/profile.jpeg'
+import profile2 from './images/profile2.jpeg'
+import event_echo from './images/event-echo.png'
+import object_detection from './images/object-detection.jpg'
+import flower from './images/flower.jpg'
+import biometric_attendance from './images/biometric-attendance.jpg'
+import chat_app from './images/chat-app.png'
+// Import your CV files
+import resumeDS from "../assets/Lotanna Okeke DS Resume.pdf";
+import resumeSWE from "../assets/Lotanna Okeke SWE Resume.pdf";
 
 export const assests = {
     dummyPic,
     profile,
     profile2,
+    event_echo,
+    object_detection,
+    chat_app,
+    flower,
+    biometric_attendance,
+    resumeDS,
+    resumeSWE,
 }
 
 export const colors = {
@@ -24,100 +39,93 @@ export const socials = [
 export const experiences = [
     {
         type: 1,
-        organization: "Access Bank",
-        role: "Software Engineer",
-        duration: "July 2022 - Present",
-        text: "Built and maintained scalable banking solutions, working on backend systems with Java Spring and Flutter front-end apps. Optimized product delivery by implementing improved workflows.",
+        organization: "Pan-Atlantic University",
+        role: "Designer and Backend Engineer",
+        duration: "Dec. 2023-Feb. 2024",
+        text: "Worked as a team to develop a Student Information and Learning Management System (SILMS). Designed wireframes and prototypes using Figma. Developed REST APIs using Nest.js and PostgreSQL.",
     },
     {
         type: 1,
-        organization: "Access Bank",
-        role: "Software Engineer",
-        duration: "July 2022 - Present",
-        text: "Built and maintained scalable banking solutions, working on backend systems with Java Spring and Flutter front-end apps. Optimized product delivery by implementing improved workflows.",
+        organization: "VAS2Nets Technologies",
+        role: "Mobile Application Developer (Intern)",
+        duration: "July. 2023 - Oct. 2023",
+        text: "Designed and developed the mobile frontend of a web service using Figma and Flutter. Improved design based on feedback and collaborated with web frontend and backend developers.",
     },
     {
         type: 1,
-        organization: "Access Bank",
-        role: "Software Engineer",
-        duration: "July 2022 - Present",
-        text: "Built and maintained scalable banking solutions, working on backend systems with Java Spring and Flutter front-end apps. Optimized product delivery by implementing improved workflows.",
+        organization: "Ansvel",
+        role: "Flutter Developer (Intern)",
+        duration: "March. 2023 - June. 2023",
+        text: "Worked on the design and functionality of a referral reward system for a Fintech mobile application using Flutter and Firebase. Designed login/sign-up pages and the splash screen.",
     },
     {
         type: 2,
-        organization: "Access Bank",
-        role: "Software Engineer",
-        duration: "July 2022 - Present",
-        text: "Built and maintained scalable banking solutions, working on backend systems with Java Spring and Flutter front-end apps. Optimized product delivery by implementing improved workflows.",
-    },
-    {
-        type: 2,
-        organization: "Access Bank",
-        role: "Software Engineer",
-        duration: "July 2022 - Present",
-        text: "Built and maintained scalable banking solutions, working on backend systems with Java Spring and Flutter front-end apps. Optimized product delivery by implementing improved workflows.",
+        organization: "Pan-Atlantic University",
+        role: "Bachelor of Science in Computer Science",
+        duration: "Nov. 2020 - Oct. 2024",
+        text: "Relevant Courses: Linear Algebra, Data Structures, Discrete Structures, Structured Programming, Data Management, System Analysis and Design, Object-Oriented Programming, Algorithms and Complexity Analysis, Formal Methods and Software Development, Computational Science and Numerical Methods, Software Engineering",
     }
 ]
 
 export const allProjects = [
     {
         id: 1,
-        picture: assests.dummyPic,
-        projectName: "Retro Camera",
-        projectTechnology: "Website",
+        picture: assests.event_echo,
+        projectName: "Event Echo",
+        projectTechnology: "Mobile",
         projectDescription:
-            "A modern and minimalist website showcasing vintage camera collections.",
-        skillsUsed: ["Branding", "Product Design"],
-        projectLink: "#",
+            "A full-stack mobile reminder application using Spring Boot with Flutter",
+        skillsUsed: ["Flutter", "Spring Boot", "PostgreSQL"],
+        projectLink: "https://github.com/lotanna-okeke/EventEcho",
     },
     {
         id: 2,
-        picture: assests.dummyPic,
-        projectName: "The White Lamp",
-        projectTechnology: "Product Design",
+        picture: assests.object_detection,
+        projectName: "Video Object Detection",
+        projectTechnology: "Computer Vision",
         projectDescription:
-            "A sleek and stylish lamp design emphasizing simplicity and elegance.",
-        skillsUsed: ["Branding", "Minimalism"],
-        projectLink: "#",
+            "An interface that detects the objects in a video of the users choice.",
+        skillsUsed: ["Python", "YOLO algorithm"],
+        projectLink: "https://github.com/lotanna-okeke/LOkekeCSC418/blob/main/Week6/Object_Detection_Project.ipynb",
     },
     {
-        id: 1,
+        id: 3,
         picture: assests.dummyPic,
-        projectName: "Retro Camera",
+        projectName: "Portfolio",
         projectTechnology: "Website",
         projectDescription:
-            "A modern and minimalist website showcasing vintage camera collections.",
-        skillsUsed: ["Branding", "Product Design"],
-        projectLink: "#",
+            "A modern and stylish website showcasing important details about me.",
+        skillsUsed: ["React", "Tailwind", "Vite"],
+        projectLink: "https://github.com/lotanna-okeke/my-portfolio",
     },
     {
-        id: 2,
-        picture: assests.dummyPic,
-        projectName: "The White Lamp",
-        projectTechnology: "Product Design",
+        id: 4,
+        picture: assests.chat_app,
+        projectName: "Chat App",
+        projectTechnology: "Mobile",
         projectDescription:
-            "A sleek and stylish lamp design emphasizing simplicity and elegance.",
-        skillsUsed: ["Branding", "Minimalism"],
-        projectLink: "#",
+            "A mobile application chat app using Dart and Firebase to handle the logic, with Flutter as the frontend.",
+        skillsUsed: ["Flutter", "Firebase"],
+        projectLink: "https://github.com/lotanna-okeke/flutter_personal_projects/tree/main/chat_app",
     },
     {
-        id: 1,
-        picture: assests.dummyPic,
-        projectName: "Retro Camera",
-        projectTechnology: "Website",
+        id: 5,
+        picture: assests.flower,
+        projectName: "Flower Image Recognition",
+        projectTechnology: "Deep Learning",
         projectDescription:
-            "A modern and minimalist website showcasing vintage camera collections.",
-        skillsUsed: ["Branding", "Product Design"],
-        projectLink: "#",
+            "A model that identifies the type of flower using its picture, with an accuracy of above 80%.",
+        skillsUsed: ["Python", "matplotlib", "tensorflow"],
+        projectLink: "https://github.com/lotanna-okeke/Deep-Learning/tree/main",
     },
     {
-        id: 2,
-        picture: assests.dummyPic,
-        projectName: "The White Lamp",
-        projectTechnology: "Product Design",
+        id: 6,
+        picture: assests.biometric_attendance,
+        projectName: "Biometrics Attendance System",
+        projectTechnology: "Desktop",
         projectDescription:
-            "A sleek and stylish lamp design emphasizing simplicity and elegance.",
-        skillsUsed: ["Branding", "Minimalism"],
-        projectLink: "#",
+            "An attendance management system that uses fingerprints.",
+        skillsUsed: ["JFrames", "MySQL"],
+        projectLink: "https://github.com/lotanna-okeke/Attendance",
     },
 ];

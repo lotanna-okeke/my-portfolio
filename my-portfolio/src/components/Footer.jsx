@@ -18,8 +18,8 @@ function Footer() {
           <p className="mb-2 md:mb-0">© 2025 Lotanna Okeke</p>
           <p className="hidden md:inline">|</p>
           <p className="text-center md:text-left">
-            Designed by <span className="text-white">StyleShoot</span>. Distributed by 
-            <span className="text-white"> ThemeWagon</span>
+            Designed by <span className="text-white">Lotanna</span>. Distributed by 
+            <span className="text-white"> Lotanna</span>
           </p>
         </div>
 

@@ -26,15 +26,17 @@ function ProjectModal({ project, onClose }) {
         </button>
 
         {/* Project Image with Glass Effect */}
-        <img
-          src={project.picture}
-          alt={project.projectName}
-          className="w-full h-64 object-cover rounded-lg shadow-lg"
-        />
+        <div className="flex justify-center">
+          <img
+            src={project.picture}
+            alt={project.projectName}
+            className="rounded-lg shadow-lg w-full max-w-64 h-32 md:h-auto object-cover"
+          />
+        </div>
 
         {/* Project Details */}
         <div className="mt-6 text-center">
-          <h3 className="text-3xl font-bold text-[#C8A26B]">
+          <h3 className="text-xl md:text-3xl font-bold text-[#C8A26B]">
             {project.projectName}
           </h3>
           <p className="text-gray-400 text-sm mt-1">
@@ -45,16 +47,16 @@ function ProjectModal({ project, onClose }) {
           <div className="w-16 h-[3px] bg-[#C8A26B] mx-auto my-4 animate-pulse"></div>
 
           {/* Project Description */}
-          <p className="text-white text-md leading-relaxed px-2">
+          <p className="text-white text-sm md:text-md leading-relaxed px-2">
             {project.projectDescription}
           </p>
 
           {/* Skills Section */}
-          <div className="mt-5 flex flex-wrap justify-center gap-2">
+          <div className="mt-5 flex flex-wrap justify-center gap-1 md:gap-2">
             {project.skillsUsed.map((skill, index) => (
               <span
                 key={index}
-                className=" text-[#C8A26B] px-3 py-1 text-sm rounded-full cursor-default transition hover:bg-[#C8A26B] hover:text-black"
+                className="text-[#C8A26B] px-2 py-1 text-xs md:text-sm rounded-full cursor-default transition hover:bg-[#C8A26B] hover:text-black"
               >
                 {skill}
               </span>

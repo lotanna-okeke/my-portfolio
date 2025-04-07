@@ -44,9 +44,9 @@ function Intro() {
   const baseSizes = [100, 200, 300, 400, 500, 800];
 
   const getResponsiveSize = (baseSize) => {
-    if (window.innerWidth < 640) return baseSize * 0.4;
-    if (window.innerWidth < 768) return baseSize * 0.6;
-    if (window.innerWidth < 1024) return baseSize * 0.8;
+    if (window.innerWidth < 640) return baseSize * 0.25; // Keep the smaller circle adjustments
+    if (window.innerWidth < 768) return baseSize * 0.4;
+    if (window.innerWidth < 1024) return baseSize * 0.6;
     return baseSize;
   };
 
@@ -73,7 +73,7 @@ function Intro() {
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
-        className="max-w-4xl"
+        className="max-w-4xl z-10"
       >
         <div className="ps-5 sm:ps-20">
           <div className="flex items-center gap-[3px]">
@@ -92,7 +92,7 @@ function Intro() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.5 }}
-        className="max-w-4xl ps-5 sm:ps-20 mt-5"
+        className="max-w-4xl ps-5 sm:ps-20 mt-5 z-10"
       >
         <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif leading-tight">
           Lotanna Okeke.
@@ -105,7 +105,7 @@ function Intro() {
       </motion.div>
 
       {/* Animated Semicircles */}
-      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 flex flex-col items-end">
+      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 flex flex-col items-end w-1/2 md:w-auto">
         {circleSizes.map((size, index) => (
           <motion.div
             key={index}
@@ -143,7 +143,7 @@ function Intro() {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 2.5, duration: 0.5 }}
-        className="absolute right-5 sm:right-10 top-1/2 transform -translate-y-1/2 flex mt-70 space-y-4 text-gray-500 text-xs tracking-widest rotate-90 origin-right uppercase"
+        className="absolute right-5 hidden md:inline sm:right-10 top-1/2 transform -translate-y-1/2 flex mt-70 space-y-4 text-gray-500 text-xs tracking-widest rotate-90 origin-right uppercase z-10"
       >
         {socials.map((site, index) => (
           <a
