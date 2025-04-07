@@ -16,7 +16,7 @@ function App() {
         <About />
         <Works />
         {/* Divider with Better Spacing */}
-        <div className="w-full h-[2px] max-w-7xl items-center flex mx-auto bg-[#2c2c2d] my-12"></div>
+        {/* <div className="w-full h-[2px] max-w-7xl items-center flex mx-auto bg-[#2c2c2d] my-12"></div> */}
         <Contact />
       </main>
       <Footer/>
