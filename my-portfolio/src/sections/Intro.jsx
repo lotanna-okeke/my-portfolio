@@ -77,7 +77,7 @@ function Intro() {
       >
         <div className="ps-5 sm:ps-20">
           <div className="flex items-center gap-[3px]">
-            <p className="w-8 md:w-10 h-[1px] bg-[#C8A26B] opacity-70"></p>
+            <p className="w-8 md:w-10 h-[1px] bg-white"></p>
             <p className="text-[#C8A26B] text-sm sm:text-xl uppercase tracking-widest leading-none ps-2">
               Hello World,
             </p>

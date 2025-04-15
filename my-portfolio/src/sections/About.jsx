@@ -38,7 +38,7 @@ function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="w-full flex flex-col md:w-[52%] lg:w-[55%] md:ml-[-1%] lg:ml-[-4%] text-white md:justify-center"
+          className="w-full flex flex-col md:w-[52%] lg:w-[55%] md:ml-[-2%] lg:ml-[-5%] text-white md:justify-center"
         >
           <div className="mb-6">
             <div className="flex items-center gap-[3px]">

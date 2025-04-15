@@ -29,14 +29,21 @@ export const colors = {
 }
 
 export const socials = [
-    ["LinkedIn", "#"],
-    ["Twitter", "#"],
-    ["Instagram", "#"],
+    ["LinkedIn", "https://www.linkedin.com/in/lotanna-okeke-811a92240"],
+    ["Twitter", "https://x.com/aauser44?s=08"],
+    ["Instagram", "https://www.instagram.com/lotanna.okeke?igsh=NDlvb2FhaHJsbWg0"],
     ["Github", "https://github.com/lotanna-okeke"],
 ]
 
 //Type 1 is for work experience, type 2 is for education
 export const experiences = [
+    {
+        type: 1,
+        organization: "Bluetag Technologies",
+        role: "Mobile Application Developer (Intern)",
+        duration: "Feb. 2025-April. 2025",
+        text: "Worked under a team as a frontend mobile developer using Flutter. Implemented some key functionalities and provided useful insights to some of the designs.",
+    },
     {
         type: 1,
         organization: "Pan-Atlantic University",
@@ -50,13 +57,6 @@ export const experiences = [
         role: "Mobile Application Developer (Intern)",
         duration: "July. 2023 - Oct. 2023",
         text: "Designed and developed the mobile frontend of a web service using Figma and Flutter. Improved design based on feedback and collaborated with web frontend and backend developers.",
-    },
-    {
-        type: 1,
-        organization: "Ansvel",
-        role: "Flutter Developer (Intern)",
-        duration: "March. 2023 - June. 2023",
-        text: "Worked on the design and functionality of a referral reward system for a Fintech mobile application using Flutter and Firebase. Designed login/sign-up pages and the splash screen.",
     },
     {
         type: 2,

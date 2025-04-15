@@ -30,7 +30,7 @@ function ProjectModal({ project, onClose }) {
           <img
             src={project.picture}
             alt={project.projectName}
-            className="rounded-lg shadow-lg w-full max-w-64 h-32 md:h-auto object-cover"
+            className="rounded-lg shadow-lg w-full max-w-64 h-32 md:h-64 object-cover"
           />
         </div>
 

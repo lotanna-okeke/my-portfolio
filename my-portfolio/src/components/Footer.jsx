@@ -26,7 +26,7 @@ function Footer() {
         {/* Scroll-to-top Button */}
         <button
           onClick={scrollToTop}
-          className="absolute right-4 sm:right-6 bottom-4 sm:bottom-6 text-[#C8A26B] p-3 sm:p-4 rounded-full border border-[#2c2c2d] shadow-lg hover:text-black hover:bg-[#C8A26B] transition duration-300"
+          className="absolute right-2 sm:right-6 bottom-2 sm:bottom-6 text-[#C8A26B] p-3 sm:p-4 rounded-full border border-[#2c2c2d] shadow-lg hover:text-black hover:bg-[#C8A26B] transition duration-300"
         >
           <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
