@@ -43,7 +43,7 @@ function Contact() {
             transition={{ duration: 0.8 }}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-12 sm:mb-20 leading-snug max-w-7xl"
           >
-            I love to hear from you. Whether you have a question or just want to
+            I'd love to hear from you. Whether you have a question or just want to
             chat about mobile development, data science & AI – shoot me a
             message.
           </motion.h2>
