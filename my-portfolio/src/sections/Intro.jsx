@@ -6,7 +6,6 @@ const careers = [
   "Mobile Developer",
   "Data Scientist",
   "Web Developer",
-  "UI/UX Designer",
 ];
 
 function Intro() {
